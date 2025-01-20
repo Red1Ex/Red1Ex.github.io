@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Estatery</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-container__hero hero">
+            <header class="hero__header header">
+                <nav class="header__nav">
+                    <div class="header__nav--left">
+                        <a href="index.html" class="header__logo logo"><img src="img/logo.png" alt="logo" class="logo__img"><p class="logo__title">ESTATERY</p></a>
+                        <div class="header__list" id="links">
+                            <a href="rent.html" class="list__item">Rent</a>
+                            <a href="buy.html" class="list__item item--nf">Buy</a>
+                            <a href="sell.html" class="list__item item--nf">Sell</a>
+                            <div class="list__item item__dropdown item--nf">
+                                <button class="item__btn">Menage Property <img class="btn__img" src="img/carretdown.png" alt="carretdown"></button>
+                                <div class="item__cont">
+                                    <a href="index.html">Link one</a>
+                                    <a href="index.html">Link two</a>
+                                    <a href="index.html">Link three</a>
+                                </div>
+                            </div> 
+                            <div class="list__item item__dropdown item--nf">
+                                <button class="item__btn">Resourses <img class="btn__img" src="img/carretdown.png" alt="carretdown"></button>
+                                <div class="item__cont">
+                                    <a href="index.html">Link one</a>
+                                    <a href="index.html">Link two</a>
+                                    <a href="index.html">Link three</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__nav--right" id="links">
+                        <div class="header__in-buttons">
+                            <button class="in-buttons__login button">Login</button>
+                            <button class="in-buttons__sign button">Sign up</button>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="nav__menu" onclick="navDrop()"><img src="img/menu.svg" alt="menu"></a>
+                </nav>
+            </header>
+            <div class="hero__content">
+                    <div class="hero__headline headline hero__content--left">
+                        <h1>Buy, rent, or sell <br> your property <br> easily</h1>
+                        <h4>A great platform to buy, sell, or even rent your properties without any commisions.</h4>
+                    </div>
+                    <div class="hero__numbers hero__content--left">
+                        <div class="numbers__renters">
+                            <img src="img/renters.svg" alt="renters">
+                            <h3>50k+ renters</h3>
+                            <h5>believe in our service</h5>
+                        </div>
+                        <div class="numbers__properties">
+                            <img src="img/properties.svg" alt="properties">
+                            <h3>10k+ properties</h3>
+                            <h5 class="comp">and house ready for occupancy</h5>
+                            <h5 class="mob">ready for occupancy</h5>
+                        </div>
+                    </div>
+                    <div class="hero__image">
+                        <img src="img/HouseImage.svg" draggable="false" alt="House">
+                    </div>
+            </div>
+        </div>
+        <div class="main-container__benefit benefit">
+            <div class="benefit__illustration">
+                <div class="illustration__content">
+                    <h2>The new way to find your new home</h2>
+                    <h5>Find your dream place to live in with more than 10k+ properties listed.</h5>
+                    <button class="illustration__button button">Browse Properties</button>
+                </div>
+                <img src="img/Illustration.svg" alt="Illustration">
+            </div>
+            <div class="benefit__benefits">
+                <div class="benefits__insurance benefits">
+                    <img src="img/InsuranceIcon.svg" alt="Insurance">
+                    <h3>Property Insurance</h3>
+                    <h5>We offer our customer property protection of liability coverage and insurance for their better life.</h5>
+                </div>
+                <div class="benefits__price benefits">
+                    <img src="img/PriceIcon.svg" alt="Price">
+                    <h3>Best Price</h3>
+                    <h5>Not sure what  you should be charging for your property? No need to worry, let us do the numbers for you.</h5>
+                </div>
+                <div class="benefits__commission benefits">
+                    <img src="img/CommissionIcon.svg" alt="Commission">
+                    <h3>Lowest Commission</h3>
+                    <h5>You no longer have to negotiate commissions and haggle with other agents it only cost 2%!</h5>
+                </div>
+                <div class="benefits__control benefits">
+                    <img src="img/ControlIcon.svg" alt="Control">
+                    <h3>Overall Control</h3>
+                    <h5>Get a virtual tour, and schedule visits before you rent or buy any properties. You get overall control.</h5>
+                </div>
+            </div>
+        </div>
+        <div class="main-container__property property">
+            <div class="property__headline">
+                <h2>Based on your location</h2>
+                <h5>Some of our picked properties near you location.</h5>
+            </div>
+            <div class="property__tab-search">
+                <div class="tab-search__tabs">
+                    <button class="tabs__button active button" onclick="openTab('rent')"><img src="img/rentIcon.svg" alt="rent"><h4>Rent</h4></button>
+                    <button class="tabs__button button" onclick="openTab('buy')"><img src="img/BuyIcon.svg" alt="buy"><h4>Buy</h4></button>
+                    <button class="tabs__button button" onclick="openTab('sell')"><img src="img/sellIcon.svg" alt="sell"><h4>Sell</h4></button>
+                </div>
+                <form class="tab-search__search">
+                    <button class="button" type="submit"><img src="img/SearchIcon.svg" alt="search"></button>
+                    <input type="text" placeholder="Search...">
+                </form>
+            </div>
+            <div class="property__list">
+                <div id="rent" class="property__list--slide active">
+                    <div class="list__row" draggable="false">
+                        <a href="index.html" class="list__row--first" draggable="false">
+                            <img class="list__house" src="img/firstHouse.svg" alt="House">
+                            <img class="list__popular" src="img/popularIcon.svg" alt="popular">
+                            <button class="list__favorited button"><img src="img/Favorited.svg" alt="heart"></button>
+                            <div class="list__price">
+                                <h5>$2,095</h5>
+                                <h6>/month</h6>
+                            </div>
+                            <h5 class="list__title">Palm Harbor</h5>
+                            <h6 class="list__adress"><mark>2699 Green Valley, </mark>Highland Lake, FL</h6>
+                            <div class="list__line"></div>
+                            <div class="list__facilities">
+                                <div class="facilities__beds">
+                                    <img src="img/Bed.svg" alt="bed">
+                                    <h6>3 <mark>Beds</mark></h6>
+                                </div>
+                                <div class="facilities__baths">
+                                    <img src="img/Bath.svg" alt="Bath">
+                                    <h6>2 <mark>Bathrooms</mark></h6>
+                                </div>
+                                <div class="facilities__dimensions">
+                                    <img src="img/SquareMeters.svg" alt="metrs">
+                                    <h6>5x7 m<sup>2</sup></h6>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="index.html" class="list__row--second" draggable="false">
+                            <img class="list__house" src="img/secondHouse.svg" alt="House">
+                            <img class="list__popular" src="img/popularIcon.svg" alt="popular">
+                            <button class="list__favorited button"><img src="img/Favorited.svg" alt="heart"></button>
+                            <div class="list__price">
+                                <h5>$2,700</h5>
+                                <h6>/month</h6>
+                            </div>
+                            <h5 class="list__title">Beverly Springfield</h5>
+                            <h6 class="list__adress"><mark>2821 Lake Sevilla, </mark>Palm Harbor, TX</h6>
+                            <div class="list__line"></div>
+                            <div class="list__facilities">
+                                <div class="facilities__beds">
+                                    <img src="img/Bed.svg" alt="bed">
+                                    <h6>4 <mark>Beds</mark></h6>
+                                </div>
+                                <div class="facilities__baths">
+                                    <div class="facilities__beds">
+                                        <img src="img/Bath.svg" alt="Bath">
+                                        <h6>2 <mark>Bathrooms</mark></h6>
+                                    </div>
+                                </div>
+                                <div class="facilities__dimensions">
+                                    <div class="facilities__beds">
+                                        <img src="img/SquareMeters.svg" alt="metrs">
+                                        <h6>6x7.5 m<sup>2</sup></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="index.html" class="list__row--third" draggable="false">
+                            <img class="list__house" src="img/thirdHouse.svg" alt="House">
+                            <img class="list__popular" src="img/popularIcon.svg" alt="popular">
+                            <button class="list__favorited button"><img src="img/Favorited.svg" alt="heart"></button>
+                            <div class="list__price">
+                                <h5>$4,550</h5>
+                                <h6>/month</h6>
+                            </div>
+                            <h5 class="list__title">Faulkner Ave</h5>
+                            <h6 class="list__adress"><mark>909 Woodland St, </mark>Michigan, IN</h6>
+                            <div class="list__line"></div>
+                            <div class="list__facilities">
+                                <div class="facilities__beds">
+                                    <img src="img/Bed.svg" alt="bed">
+                                    <h6>4 <mark>Beds</mark></h6>
+                                </div>
+                                <div class="facilities__baths">
+                                    <div class="facilities__beds">
+                                        <img src="img/Bath.svg" alt="Bath">
+                                        <h6>3 <mark>Bathrooms</mark></h6>
+                                    </div>
+                                </div>
+                                <div class="facilities__dimensions">
+                                    <div class="facilities__beds">
+                                        <img src="img/SquareMeters.svg" alt="metrs">
+                                        <h6>8x10 m<sup>2</sup></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div id="buy" class="property__list--slide">
+                    <div class="list__row">
+                        <h2>There's nothing here yet</h2>
+                    </div>
+                </div>
+                <div id="sell" class="property__list--slide">
+                    <div class="list__row">
+                        <h2>There's nothing here yet</h2>
+                    </div>
+                </div>
+            </div>
+            <button class="property__button button">Browse more properties</button>
+        </div>
+        <div class="main-container__landlords landlords">
+            <div class="landlords__headline">
+                <h2>We make it easy for <mark class="landlords__headline--purple">tenants</mark> and <mark class="landlords__headline--purple">landlords.</mark></h2>
+                <h5>Whether it’s selling your current home, getting financing, or buying a new home, we make it easy  and efficient. The best part? you’ll save a bunch of money and time with our services.</h5>
+            </div>
+            <div class="landlords__features">
+                <div class="features__item features__item--first features__item--nl">
+                    <div class="item__content--same">
+                        <div class="content__icon">
+                            <img src="img/tourIcon.svg" alt="tour">
+                        </div>
+                        <h3>Virtual home tour</h3>
+                        <h5>You can communicate directly with landlords and we provide you with virtual tour before you buy or rent the property.</h5>
+                    </div>    
+                </div>
+                <div class="features__item features__item--second features__item--nl">
+                    <div class="item__content--same">
+                        <div class="content__icon content__icon--second">
+                            <img src="img/dealIcon.svg" alt="deal">
+                        </div>
+                        <h3>Find the best deal</h3>
+                        <h5>Browse thousands of properties, save your favorites and set up search alerts so you don’t miss the best home deal!</h5>
+                    </div>
+                </div>
+                <div class="features__item features__item--third">
+                    <div class="item__content--dif">
+                        <div class="content__icon content__icon--third">
+                            <img src="img/applyIcon.svg" alt="apply">
+                        </div>
+                        <h3>Get ready to apply</h3>
+                        <h5>Find your dream house? You just need to do a little to no effort and you can start move in to your new dream home!</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="landlords__line"></div>
+            <div class="landlords__stats">
+                <div class="stats__rate">
+                    <h2>7.4%</h2>
+                    <h5>Property Return Rate</h5>
+                </div>
+                <div class="stats__line"></div>
+                <div class="stats__line--horizontal"></div>
+                <div class="stats__rent">
+                    <h2>3,856</h2>
+                    <h5>Property in Sell & Rent</h5>
+                </div>
+                <div class="stats__line"></div>
+                <div class="stats__line--horizontal"></div>
+                <div class="stats__transactions">
+                    <h2>2,540</h2>
+                    <h5>Daily Completed Transactions</h5>
+                </div>
+            </div>
+        </div>
+        <div class="main-container__cta cta">
+            <div class="cta__headline">
+                <h3 class="cta__spam">No Spam Promise</h3>
+                <div class="cta__headline--bottom">
+                    <h2>Are you a landlord?</h2>
+                    <h5>Discover ways to increase your home's value and  get listed. No Spam.</h5>
+                </div>
+            </div>
+            <div class="cta__email">
+                <form>
+                    <input type="text" placeholder="Enter your email address">
+                    <button class="submit__button" type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="cta__join">
+                <h6>Join <mark>10,000+</mark> other landlords in our estatery community.</h6>
+            </div>
+        </div>
+    <footer class="main-container__footer footer">
+        <div class="footer__kostyl">
+            <a href="index.html" class="footer__logo logo"><img src="img/logo.png" alt="logo" class="logo__img"><p class="logo__title">ESTATERY</p></a>
+            <nav class="footer__nav">
+                <div class="nav__sell-home">
+                    <h5>SELL A HOME</h5>
+                    <a href="index.html">
+                        <h5>Request an offer</h5>
+                        <h5>Pricing</h5>
+                        <h5>Reviews</h5>
+                        <h5>Stories</h5>
+                    </a>
+                </div>
+                <div class="nav__buy-home">
+                    <h5>BUY A HOME</h5>
+                    <a href="index.html">
+                        <h5>Buy</h5>
+                        <h5>Finance</h5>
+                    </a>
+                </div>
+                <div class="nav__buy-rent-sell">
+                    <h5>BUY, RENT AND SELL</h5>
+                    <a href="index.html">
+                        <h5>Buy and sell properties</h5>
+                        <h5>Rent home</h5>
+                        <h5>Builder trade-up</h5>
+                    </a>
+                </div>
+                <div class="nav__terms-privacy">
+                    <h5>TERMS & PRIVACY</h5>
+                    <a href="index.html">
+                        <h5>Trust & Safety</h5>
+                        <h5>Terms of Service</h5>
+                        <h5>Privacy Policy</h5>
+                    </a>
+                </div>
+                <div class="nav__about">
+                    <h5>ABOUT</h5>
+                    <a href="index.html">
+                        <h5>Company</h5>
+                        <h5>How it works</h5>
+                        <h5>Contact</h5>
+                        <h5>Investors</h5>
+                    </a>
+                </div>
+                <div class="nav__resources">
+                    <h5>RESOURCES</h5>
+                    <a href="index.html">
+                        <h5>Blog</h5>
+                        <h5>Guides</h5>
+                        <h5>FAQ</h5>
+                        <h5>Help Center</h5>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__copyright">
+            <h5>©2024 Estatery. All rights reserved</h5>
+            <div class="footer__social">
+                <a class="footer__social--nl" href="https://www.facebook.com"><img src="img/facebook-f 1.svg" alt="facebook"></a>
+                <a class="footer__social--nl" href="https://www.instagram.com"><img src="img/instagram 1.svg" alt="inst"></a>
+                <a class="footer__social--nl" href="https://twitter.com"><img src="img/twitter 1.svg" alt="X"></a>
+                <a href="https://ru.linkedin.com"><img src="img/linkedin 1.svg" alt="linkedin"></a>
+            </div>
+        </div>
+    </footer>
+    </div>
+<script src="script/tabScript.js"></script>
+<script src="script/dragSlide.js"></script>
+<script src="script/navDrop.js"></script>
+<script src="script/dragSwipe.js"></script>
+</body>
+</html>
